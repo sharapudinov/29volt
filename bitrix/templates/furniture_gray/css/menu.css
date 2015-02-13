@@ -1,0 +1,76 @@
+/*Для главной*/
+
+.left-side { height:100%;left: 129px !important; top:150px; position:absolute; z-index:100;}
+
+.no3d #main-menu { overflow:hidden; }
+    #main-menu > .scroll-layout {
+	transition:transform 400ms;
+	-moz-transition:-moz-transform 400ms;
+	-o-transition:-moz-transform 400ms;
+	-webkit-transition:-webkit-transform 400ms;
+	-ms-transition:-ms-transform 400ms;
+	
+	backface-visibility:hidden;
+	-moz-backface-visibility:hidden;
+	-o-backface-visibility:hidden;
+	-webkit-backface-visibility:hidden;
+	-ms-backface-visibility:hidden;
+	
+	transform-style:preserve-3d;
+	-moz-transform-style:preserve-3d;
+	-o-transform-style:preserve-3d;
+	-webkit-transform-style:preserve-3d;
+	-ms-transform-style:preserve-3d;
+	
+	position:absolute;
+	width:117px;
+	top:0;
+	right:0;
+    }
+
+
+@media (max-width: 1200px) {
+  .left-side{
+  	position: absolute;
+  	left: 0 !important;
+
+  }
+  .logo{
+  	margin-left: 0;
+  }
+  .center_bl {
+  	width: 855px;
+  	padding-left: 120px;
+  }
+  .step .first{
+		width: 250px;
+		height: 180px;
+	}
+	.step a img{
+		width: 250px;
+		height: 180px;
+	}
+	.step a .text {
+	width: 230px;
+	}
+
+}
+
+  .center_bl p{
+  	font-size: 15px;
+  }
+
+.offers_form{
+	display: none;
+}
+.bx_breadcrumbs{
+	display: none;
+}
+
+.wrapper .offers {
+	width: 800px;
+	float: right;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	display: none;
+}

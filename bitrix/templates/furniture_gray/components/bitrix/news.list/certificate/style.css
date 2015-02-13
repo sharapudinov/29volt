@@ -1,0 +1,18 @@
+.content .more_photos_block {
+    margin: 17px 0;
+    text-align: center;
+}
+.photos_block .fancybox {
+    text-decoration: none;
+}
+.content .more_photos_block .more_photos {
+    border: 1px solid #89171a;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 auto;
+    padding: 9px 0;
+    text-align: center;
+    width: 108px;
+}

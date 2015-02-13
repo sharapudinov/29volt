@@ -1,0 +1,18 @@
+
+.top_block_h .search input[type="search"] {
+	width: 267px;
+	height: 25px !important;
+	float: left;
+	border: 1px solid #A3D6EC;
+	outline: none;
+	text-indent: 60px;
+	margin: 0;
+}
+
+.slider{
+	background: #fff;
+}
+
+.left-side{
+	display: none;
+}
