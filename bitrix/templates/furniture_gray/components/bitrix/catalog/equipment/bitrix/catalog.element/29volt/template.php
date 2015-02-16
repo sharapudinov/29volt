@@ -19,89 +19,46 @@
     <!-- MAIN CONTENT -->
     <div class="lof-main-outer">
         <ul class="lof-main-wapper">
+            <?  foreach ($arResult['PROPERTIES']['MORE_PHOTO']['VALUE'] as $id_img) :?>
             <li>
-                <span class="discounts"></span>
-                <span class="gifts"></span>
-                <img src="img/clock.jpg" />
+                <img src="<?=CFile::GetPath($id_img);?>" />
 
             </li>
-            <li>
-                <img src="img/clock-a.jpg" />
-            </li>
-            <li>
-                <img src="img/clock.jpg" />
-            </li>
-            <li>
-
-                <img src="img/clock-a.jpg" />
-            </li>
-
+            <?endforeach?>
         </ul>
     </div>
     <!-- END MAIN CONTENT -->
     <!-- NAVIGATOR -->
 
     <div class="lof-navigator-outer">
+
         <ul class="lof-navigator">
+          <?  foreach ($arResult['PROPERTIES']['MORE_PHOTO']['VALUE'] as $id_img) :?>
+           <? $file = CFile::ResizeImageGet($id_img, array('width' => 800, 'height' => 600), BX_RESIZE_IMAGE_PROPORTIONAL, true);?>
             <li>
                 <div>
-                    <img src="img/clock-mini.png" />
-
+                    <img src="<?=$file['src'];?>"/>
                 </div>
             </li>
-            <li>
-                <div>
-                    <img src="img/clock-mini2.png" />
-
-                </div>
-            </li>
-
-            <li>
-                <div>
-                    <img src="img/clock-mini.png" />
-
-                </div>
-            </li>
-
-            <li>
-                <div>
-                    <img src="img/clock-mini2.png" />
-
-                </div>
-            </li>
-
-
+            <?endforeach?>
         </ul>
     </div>
 </div>
-<div id="main" role="main">
-    <section class="slider_flexs">
-        <div class="flexslider">
-            <ul class="slides">
-                <?
-                foreach ($arResult['PROPERTIES']['MORE_PHOTO']['VALUE'] as $id_img) {
-                    $file = CFile::ResizeImageGet($id_img, array('width' => 800, 'height' => 600), BX_RESIZE_IMAGE_PROPORTIONAL, true);
-                    ?>
-                    <li data-thumb="<?= $file['src'] ?>"><a rel="catalog-detail-images" class="catalog-detail-images" href="<?= $file['src'] ?>"><img src="<?= $file['src'] ?>" title="<?=$file['name']?>" /></a></li>
-                <? }
-                ?>
-            </ul>
-        </div>
-        <div class="offers_pay"><a class="hellp_3" id="login_pop">Оформить заказ</a></div>
-    </section>
-</div>
-
-<!-- FlexSlider -->
+<link rel="stylesheet" type="text/css" href="<?=SITE_TEMPLATE_PATH?>/css/lofslide.css" />
+<script type="text/javascript" type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/jquery.easing.js"></script>
+<script type="text/javascript" type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/script-lof.js"></script>
 <script type="text/javascript">
-    $(window).load(function() {
-        $('.flexslider').flexslider({
-            animation: "slide",
-            controlNav: "thumbnails",
-            start: function(slider) {
-                $('body').removeClass('loading');
-            }
-        });
+
+    $(document).ready( function(){
+        $('#lofslidecontent45').lofJSidernews( { interval:2000,
+            //easing:'easeOutBounce',
+            duration:0,
+            maxItemDisplay	 	: 4,
+            navigatorHeight		: 75,
+            navigatorWidth		: 90,
+            auto:false } );
     });
+
 </script>
 
 
